@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레시피 사이트</title>
+    <link rel="stylesheet" href="../A1/common/styles.css" />
+    <script src="../A1/js/animation.js" defer></script>
+    <script src="../A1/js/result.js" defer></script>
+    <!-- JavaScript 파일 연결 -->
+  </head>
+  <body>
+    <!-- 상단 헤더 -->
+    <header>
+      <div class="top-menu">
+        <div class="menu-item">
+          <a href="#current-dish">진행 중인 요리</a>
+        </div>
+
+        <div class="menu-item">
+          <a href="#timer">타이머</a>
+        </div>
+        <div class="menu-item">
+          <a href="#membership">구독 멤버십</a>
+        </div>
+        <div class="menu-item">
+          <a href="#notifications">알림</a>
+        </div>
+        <div class="menu-item">
+          <a href="#login">로그인</a>
+        </div>
+      </div>
+      <div id="hellopage">
+        <div class="logo">
+          <img src="../A1/images/logo.png" alt="사이트 로고" />
+        </div>
+        <h1>요리타임!</h1>
+        <p>맛있고 간편한 요리를 찾아보세요!</p>
+      </div>
+    </header>
+    <section class="search-bar">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="레시피를 검색하세요..."
+      />
+      <img
+        src="../A1/images/search_icon.png"
+        alt="검색 아이콘"
+        class="search-icon"
+      />
+    </section>
+
+    <!-- 배너 광고 -->
+    <section class="banner-slider">
+      <div class="slider-container">
+        <div class="slider-track">
+          <img
+            src="../A1/images/benner1.jpg"
+            alt="광고 1"
+            class="banner-image"
+          />
+          <img
+            src="../A1/images/benner2.jpg"
+            alt="광고 2"
+            class="banner-image"
+          />
+          <img
+            src="../A1/images/benner3.jpg"
+            alt="광고 3"
+            class="banner-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--왼쪽 랜덤 음식 추천-->
+    <section class="layout">
+      <div class="carousel">
+        <div class="logos"></div>
+      </div>
+
+      <!-- 메인 콘텐츠 -->
+      <main>
+        <section class="gallery">
+          <!-- 한식 -->
+          <article class="category" id="korean">
+            <h2>한식</h2>
+            <div class="recipe-card">
+              <img src="../A1/images/bibimbab.jpg" alt="비빔밥" />
+              <h3 class="recipe-title">비빔밥</h3>
+              <p class="recipe-description">
+                신선한 나물과 고추장이 어우러진 한국의 전통 요리.
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/kimchisoup.jpg" alt="김치찌개" />
+              <h3 class="recipe-title">김치찌개</h3>
+              <p class="recipe-description">
+                깊은 맛의 익은 김치와 돼지고기가 어우러진 매콤한 찌개.
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/miyeoksoup.jpg" alt="미역국" />
+              <h3 class="recipe-title">미역국</h3>
+              <p class="recipe-description">
+                소고기와 신선한 미역으로 우려낸 깔끔하고 영양 가득한 국물 요리.
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/pajeon.jpg" alt="파전" />
+              <h3 class="recipe-title">파전</h3>
+              <p class="recipe-description">
+                바삭하게 구워낸 파와 해물을 곁들인 한국식 부침개.
+              </p>
+            </div>
+          </article>
+
+          <!-- 중식 -->
+          <article class="category" id="chinese">
+            <h2>중식</h2>
+            <div class="recipe-card">
+              <img src="../A1/images/Jjajangmyun.jpg" alt="짜장면" />
+              <h3 class="recipe-title">짜장면</h3>
+              <p class="recipe-description">
+                진한 짜장 소스가 면발에 잘 어우러진 중화 요리.
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/bbas.jpg" alt="빠스" />
+              <h3 class="recipe-title">빠스</h3>
+              <p class="recipe-description">
+                이게 뭐여.. 어억? 오옹? 이거 빠스아녀? 이번 주말은 빠스에유?
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/tangsuyook.jpg" alt="탕수육" />
+              <h3 class="recipe-title">탕수육</h3>
+              <p class="recipe-description">
+                바삭하게 튀겨낸 돼지고기를 달콤새콤한 소스와 함께 즐기는 요리.
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/gkanpunggi.jpg" alt="깐풍기" />
+              <h3 class="recipe-title">깐풍기</h3>
+              <p class="recipe-description">
+                매콤달콤한 소스와 바삭한 닭고기가 조화를 이룬 중화 요리.
+              </p>
+            </div>
+          </article>
+
+          <!-- 일식 -->
+          <article class="category" id="japanese">
+            <h2>일식</h2>
+            <div class="recipe-card">
+              <img src="../A1/images/sushi.jpg" alt="스시" />
+              <h3 class="recipe-title">스시</h3>
+              <p class="recipe-description">
+                신선한 해산물이 얹어진 일본 전통 요리.
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/kaisendong.jpg" alt="카이센동" />
+              <h3 class="recipe-title">카이센동</h3>
+              <p class="recipe-description">
+                해산물의 풍미를 한 입에, 오늘 저녁으로 어떤가요?
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/monjayaki.jpg" alt="몬자야끼" />
+              <h3 class="recipe-title">몬자야끼</h3>
+              <p class="recipe-description">
+                도쿄의 명물 요리, 둘러 앉아 만들어 먹어요! 참고로 토는 아닙니다.
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/tempura.jpg" alt="덴푸라" />
+              <h3 class="recipe-title">덴푸라</h3>
+              <p class="recipe-description">
+                바삭하게 튀겨낸 새우와 채소의 일본식 튀김 요리.
+              </p>
+            </div>
+          </article>
+
+          <!-- 양식 -->
+          <article class="category" id="western">
+            <h2>양식</h2>
+            <div class="recipe-card">
+              <img src="../A1/images/steak.jpg" alt="스테이크" />
+              <h3 class="recipe-title">스테이크</h3>
+              <p class="recipe-description">
+                겉은 바삭하고 속은 부드러운 육즙 가득한 서양 요리의 대표 주자.
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/pasta.jpg" alt="파스타" />
+              <h3 class="recipe-title">파스타</h3>
+              <p class="recipe-description">
+                고소한 크림 소스 또는 매콤한 토마토 소스와 면발이 어우러진 요리.
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/burger.jpg" alt="햄버거" />
+              <h3 class="recipe-title">햄버거</h3>
+              <p class="recipe-description">
+                촉촉한 패티와 신선한 야채가 어우러진 서양식 대표 간편식.
+              </p>
+            </div>
+            <div class="recipe-card">
+              <img src="../A1/images/pizza.jpg" alt="피자" />
+              <h3 class="recipe-title">피자</h3>
+              <p class="recipe-description">
+                다양한 토핑과 고소한 치즈가 어우러진 이탈리아의 대표 요리.
+              </p>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <!-- 오른쪽 광고 -->
+      <aside class="sidebar right-sidebar">
+        <div class="ad-box">
+          <img src="../A1/images/ad.jpg" alt="광고 배너" class="ad-image" />
+          <div class="ad-description">
+            <strong>초코바 New CF 런칭기념</strong><br />
+            공식몰 15% 한정 세일! 비교할수록 결코 초코바
+          </div>
+          <a href="http://www.chocoba.com" class="ad-link"
+            >http://www.chocoba.com</a
+          >
+        </div>
+      </aside>
+    </section>
+    <!-- 하단 푸터 -->
+    <footer>
+      <div class="footer-info">
+        <p>상호 : 요리타임(YoriTime) | 대표자명 : 김성수</p>
+        <p>
+          사업자등록번호 : 000-00-00000 | 통신판매업신고번호 :
+          제0000-서울종로-0000호
+        </p>
+        <p>
+          연락처 : 000-0000-0000 | 팩스 : 000-0000-0000 | 이메일 : help@ooo.com
+        </p>
+        <p>주소 : 서울특별시 종로구 OOOO OOO</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">공지사항</a>|
+        <a href="#">이용약관</a>|
+        <a href="#">개인정보 처리방침</a>|
+        <a href="#">자주 묻는 질문</a>|
+        <a href="#">고객센터</a>
+      </div>
+    </footer>
+  </body>
+</html>
