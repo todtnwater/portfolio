@@ -1,0 +1,420 @@
+/* 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 
+  line-height: 1.6;
+  background-color: #f8f8f8;
+}
+/*!!!!*/
+/* 최상단 메뉴 스타일 */
+.top-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8f8f8; /* 노란색 배경 */
+  padding: 10px 0; /* 메뉴 높이 */
+  border-bottom: 1px solid #ddd;
+  box-shadow: 1px 1px 1px black;
+}
+
+.top-menu .menu-item a {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333; /* 텍스트 색상 */
+  padding: 5px 10px; /* 내부 여백 */
+  border-radius: 8px; /* 버튼 모양 */
+}
+
+.top-menu .menu-item a:hover {
+  background-color: #ffd700; /* 호버 시 배경색 */
+  color: #000; /* 호버 시 텍스트 색상 */
+}
+
+/* 기존 헤더 아래 여백 추가 */
+#hellopage {
+  padding-top: 20px; /* 최상단 메뉴와 간격 */
+}
+
+/*!!!!*/
+/* 헤더 */
+header {
+  padding: 30px 0; /* 상단 간격 */
+  text-align: center;
+  background-color: #ffd700; /* 노란색 배경 */
+  color: white;
+}
+
+/* 로고 스타일 */
+.logo img {
+  height: 50px; /* 로고 크기 조정 */
+  width: auto; /* 비율 유지 */
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #f8f8f8;
+  text-shadow: 1px 2px 3px black;
+}
+
+header p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #f8f8f8;
+  text-shadow: 1px 2px 3px black;
+}
+
+/* 전체 레이아웃 */
+.layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/*!!!!*/
+/* 검색 바 스타일 */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* 입력 필드와 아이콘 간의 간격 */
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* 검색 바 최대 너비 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+/* 검색 입력 필드 */
+#searchInput {
+  flex: 1; /* 입력 필드가 남은 공간을 차지 */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* 기본 검색 아이콘 */
+.search-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* 부드러운 확대/축소 효과 */
+}
+
+/* 클릭 시 확대 */
+.search-icon.clicked {
+  transform: scale(1.2); /* 확대 크기 */
+}
+
+#searchResults {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.result-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/*!!!!*/
+/* 좌측 메뉴 */
+/* 좌측 메뉴 스타일 수정 (색 반전) */
+.left-sidebar {
+  width: 20%; /* 좌측 사이드바 너비 */
+  background-color: #fff; /* 흰색 배경 */
+  padding: 20px; /* 내부 여백 */
+  border: 1px solid #ddd; /* 연한 테두리 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+}
+
+.left-sid/* 좌측 사이드바 스타일 (음식 이미지 영역) */
+.left-sidebar {
+  width: 20%; /* 좌측 사이드바 너비 */
+  background-color: #fff; /* 흰색 배경 */
+  padding: 20px; /* 내부 여백 */
+  border: 1px solid #ddd; /* 연한 테두리 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+  position: absolute; /* 최상단 고정 */
+  top: 0;
+  left: 0;
+  z-index: 10; /* 다른 요소 위에 표시 */
+  height: 100vh; /* 화면 전체 높이 */
+  overflow-y: auto; /* 스크롤 가능 */
+}
+
+.left-sidebar h3 {
+  text-align: center; /* 제목 중앙 정렬 */
+  font-size: 18px; /* 제목 글자 크기 */
+  color: #333;
+  margin-bottom: 15px; /* 제목 아래 간격 */
+}
+
+.random-images {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  gap: 10px; /* 이미지 간 간격 */
+}
+
+.random-images img {
+  width: 100%; /* 이미지 너비를 사이드바에 맞춤 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+  cursor: pointer; /* 클릭 가능 커서 */
+}
+/*!!!!*/
+/* <h2> 요소를 박스로 스타일링 */
+.category h2 {
+  display: inline-block; /* 텍스트를 감싸는 박스로 변환 */
+  background-color: #ffd700; /* 노란색 배경 */
+  color: #333; /* 텍스트 색상 */
+  width: 300px; /* 너비 설정 */
+  padding: 10px 15px; /* 내부 여백 */
+  margin: 0 auto; /* 중앙 정렬 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  font-size: 18px; /* 텍스트 크기 */
+  font-weight: bold; /* 텍스트 굵게 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+}
+
+/*!!!!*/
+/* 중앙 메인 콘텐츠 */
+.main-content {
+  flex: 1; /* 나머지 공간 차지 */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 갤러리 */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* 카테고리 간 간격 */
+  padding: 0 100px; /* 좌우 여백 */
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* 이미지 간 간격 */
+}
+
+.category h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.category img {
+  width: 300px; /* 이미지 크기 */
+  height: 200px; /* 비율 유지 */
+  border-radius: 8px; /* 모서리 둥글게 */
+}
+
+/*!!!!*/
+/* 우측 광고 스타일 */
+.right-sidebar {
+  width: 20%; /* 사이드바 너비 */
+  padding: 10px; /* 내부 여백 */
+  background-color: #f8f8f8; /* 연한 회색 배경 */
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+}
+
+.ad-box {
+  width: 100%; /* 광고 박스 너비를 꽉 채움 */
+  background-color: #fff; /* 흰색 배경 */
+  padding: 15px; /* 내부 여백 */
+  margin-bottom: 20px; /* 광고 간 간격 */
+  border: 1px solid #ddd; /* 테두리 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+  border-radius: 8px; /* 모서리 둥글게 */
+}
+
+.ad-image {
+  width: 100%; /* 광고 이미지가 박스를 꽉 채움 */
+  height: auto; /* 비율 유지 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  object-fit: cover; /* 이미지가 박스 크기에 맞게 조정 */
+  margin-bottom: 10px; /* 이미지 아래 텍스트와 간격 */
+}
+
+.ad-description {
+  font-size: 14px;
+  color: #333;
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  line-height: 1.6; /* 가독성 높은 줄 간격 */
+}
+
+.ad-link {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+.ad-link:hover {
+  text-decoration: underline; /* 호버 시 밑줄 표시 */
+}
+
+/*!!!!*/
+/* 레시피 카드 스타일 */
+/* 카드의 고정 높이 */
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 8px;
+  max-width: 300px;
+  height: 300px; /* 모든 카드의 높이를 고정 */
+  box-sizing: border-box;
+}
+
+/* 이미지 고정 크기 */
+.recipe-card img {
+  width: 300px;
+  height: 200px; /* 고정된 높이 */
+  object-fit: cover; /* 이미지 비율 유지 */
+  border-radius: 8px;
+}
+
+/* 제목 스타일 */
+.recipe-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  margin-top: 10px;
+}
+
+/* 설명 스타일 */
+.recipe-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  margin-top: 10px;
+}
+
+/*!!!!*/
+/* 배너 슬라이더 */
+.banner-slider {
+  position: relative;
+  max-width: 1200px; /* 슬라이더 최대 너비 */
+  margin: 0 auto; /* 화면 중앙 정렬 */
+  height: 300px; /* 슬라이더 높이 */
+  overflow: hidden; /* 트랙 바깥 내용 숨김 */
+  background-color: #f9f9f9; /* 배경색 */
+  box-sizing: border-box; /* 패딩 포함 크기 계산 */
+}
+
+/* 배너 이미지 */
+.banner-image {
+  flex-shrink: 0;
+  max-width: 100%; /* 슬라이더 부모 요소 너비를 넘지 않음 */
+  max-height: 100%; /* 슬라이더 높이를 넘지 않음 */
+  width: auto; /* 비율을 유지하며 너비 조정 */
+  height: auto; /* 비율을 유지하며 높이 조정 */
+  object-fit: contain; /* 비율 유지 및 짤림 방지 */
+  object-position: center; /* 이미지 중앙 정렬 */
+  background-color: #ffffff; /* 빈 공간을 흰색으로 채움 */
+}
+
+/*!!!!*/
+/* 푸터 */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-info {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.footer-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/*!!!!*/
+/* 캐러셀 스타일 */
+/* 음식 애니메이션 영역 */
+.carousel {
+  width: 250px;
+  height: 700px; /* 컨테이너 높이 */
+  position: relative;
+  overflow: hidden; /* 이미지가 영역 밖으로 나가지 않도록 설정 */
+  background-color: transparent;
+}
+
+.carousel .logos {
+  display: flex;
+  flex-direction: column;
+  animation: scroll 30s linear infinite; /* 기본 애니메이션 */
+  animation-play-state: running; /* 기본 실행 상태 */
+  gap: 10px; /* 이미지 간 간격 */
+}
+
+.carousel .logos:hover {
+  animation-play-state: paused; /* 마우스가 닿았을 때 멈춤 */
+}
+
+.carousel .logos img {
+  width: 100%;
+  height: 100px; /* 고정된 높이 */
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0; /* 추가적인 여백 제거 */
+}
+
+/* 로드 실패 시 기본 이미지 처리 */
+img[alt="음식 이미지"]:not([src]),
+img[alt="음식 이미지"][src=""] {
+  display: none;
+}
+
+
+/* 세로 애니메이션 */
+@keyframes scroll {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+       transform: translateY(calc(-1100px));
+  }
